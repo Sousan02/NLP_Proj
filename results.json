@@ -1,0 +1,163 @@
+{
+  "mode": "medium",
+  "model": "xlm-roberta-base",
+  "seed": 42,
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "train_rows_per_language": 2000,
+  "epochs": 2,
+  "kept_variant": "weighted",
+  "validation_macro_f1": {
+    "plain": 0.6715,
+    "weighted": 0.6889
+  },
+  "neutral_f1_pooled_without_hindi": {
+    "TFIDF": 0.4309,
+    "XLMR_plain": 0.4691,
+    "XLMR_weighted": 0.4933
+  },
+  "per_language": {
+    "de": {
+      "n_test": 500,
+      "TFIDF_3class_F1": 0.6512,
+      "TFIDF_binary_F1": 0.8296,
+      "XLMR_plain_3class_F1": 0.7347,
+      "XLMR_plain_binary_F1": 0.9008,
+      "XLMR_weighted_3class_F1": 0.7332,
+      "XLMR_weighted_binary_F1": 0.897
+    },
+    "en": {
+      "n_test": 500,
+      "TFIDF_3class_F1": 0.6637,
+      "TFIDF_binary_F1": 0.8319,
+      "XLMR_plain_3class_F1": 0.7234,
+      "XLMR_plain_binary_F1": 0.8852,
+      "XLMR_weighted_3class_F1": 0.7378,
+      "XLMR_weighted_binary_F1": 0.896
+    },
+    "es": {
+      "n_test": 500,
+      "TFIDF_3class_F1": 0.624,
+      "TFIDF_binary_F1": 0.8297,
+      "XLMR_plain_3class_F1": 0.7178,
+      "XLMR_plain_binary_F1": 0.8822,
+      "XLMR_weighted_3class_F1": 0.7038,
+      "XLMR_weighted_binary_F1": 0.8929
+    },
+    "fr": {
+      "n_test": 500,
+      "TFIDF_3class_F1": 0.691,
+      "TFIDF_binary_F1": 0.8543,
+      "XLMR_plain_3class_F1": 0.7197,
+      "XLMR_plain_binary_F1": 0.9027,
+      "XLMR_weighted_3class_F1": 0.7532,
+      "XLMR_weighted_binary_F1": 0.9183
+    },
+    "hi": {
+      "n_test": 400,
+      "TFIDF_3class_F1": 0.0144,
+      "TFIDF_binary_F1": 0.0144,
+      "XLMR_plain_3class_F1": 0.7961,
+      "XLMR_plain_binary_F1": 0.7961,
+      "XLMR_weighted_3class_F1": 0.8065,
+      "XLMR_weighted_binary_F1": 0.8065
+    },
+    "hinglish": {
+      "n_test": 500,
+      "TFIDF_3class_F1": 0.5682,
+      "TFIDF_binary_F1": 0.6679,
+      "XLMR_plain_3class_F1": 0.5477,
+      "XLMR_plain_binary_F1": 0.757,
+      "XLMR_weighted_3class_F1": 0.5904,
+      "XLMR_weighted_binary_F1": 0.7281
+    },
+    "ja": {
+      "n_test": 500,
+      "TFIDF_3class_F1": 0.6175,
+      "TFIDF_binary_F1": 0.8498,
+      "XLMR_plain_3class_F1": 0.7192,
+      "XLMR_plain_binary_F1": 0.8864,
+      "XLMR_weighted_3class_F1": 0.7146,
+      "XLMR_weighted_binary_F1": 0.8851
+    },
+    "zh": {
+      "n_test": 500,
+      "TFIDF_3class_F1": 0.6001,
+      "TFIDF_binary_F1": 0.8102,
+      "XLMR_plain_3class_F1": 0.6621,
+      "XLMR_plain_binary_F1": 0.8363,
+      "XLMR_weighted_3class_F1": 0.6616,
+      "XLMR_weighted_binary_F1": 0.8583
+    }
+  },
+  "zero_shot": {
+    "de": {
+      "n_test": 500,
+      "ALL_LANG_3class_F1": 0.7332,
+      "EN_ONLY_3class_F1": 0.7104,
+      "ALL_LANG_binary_F1": 0.897,
+      "EN_ONLY_binary_F1": 0.8824,
+      "binary_drop_when_EN_only": 0.0146
+    },
+    "en": {
+      "n_test": 500,
+      "ALL_LANG_3class_F1": 0.7378,
+      "EN_ONLY_3class_F1": 0.73,
+      "ALL_LANG_binary_F1": 0.896,
+      "EN_ONLY_binary_F1": 0.8997,
+      "binary_drop_when_EN_only": -0.0037
+    },
+    "es": {
+      "n_test": 500,
+      "ALL_LANG_3class_F1": 0.7038,
+      "EN_ONLY_3class_F1": 0.6739,
+      "ALL_LANG_binary_F1": 0.8929,
+      "EN_ONLY_binary_F1": 0.8798,
+      "binary_drop_when_EN_only": 0.0131
+    },
+    "fr": {
+      "n_test": 500,
+      "ALL_LANG_3class_F1": 0.7532,
+      "EN_ONLY_3class_F1": 0.703,
+      "ALL_LANG_binary_F1": 0.9183,
+      "EN_ONLY_binary_F1": 0.8891,
+      "binary_drop_when_EN_only": 0.0292
+    },
+    "hi": {
+      "n_test": 400,
+      "ALL_LANG_3class_F1": 0.8065,
+      "EN_ONLY_3class_F1": 0.7796,
+      "ALL_LANG_binary_F1": 0.8065,
+      "EN_ONLY_binary_F1": 0.7796,
+      "binary_drop_when_EN_only": 0.0269
+    },
+    "hinglish": {
+      "n_test": 500,
+      "ALL_LANG_3class_F1": 0.5904,
+      "EN_ONLY_3class_F1": 0.5168,
+      "ALL_LANG_binary_F1": 0.7281,
+      "EN_ONLY_binary_F1": 0.711,
+      "binary_drop_when_EN_only": 0.0171
+    },
+    "ja": {
+      "n_test": 500,
+      "ALL_LANG_3class_F1": 0.7146,
+      "EN_ONLY_3class_F1": 0.6814,
+      "ALL_LANG_binary_F1": 0.8851,
+      "EN_ONLY_binary_F1": 0.8562,
+      "binary_drop_when_EN_only": 0.0289
+    },
+    "zh": {
+      "n_test": 500,
+      "ALL_LANG_3class_F1": 0.6616,
+      "EN_ONLY_3class_F1": 0.6262,
+      "ALL_LANG_binary_F1": 0.8583,
+      "EN_ONLY_binary_F1": 0.8339,
+      "binary_drop_when_EN_only": 0.0244
+    }
+  },
+  "few_shot_hindi": null
+}
